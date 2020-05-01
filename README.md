@@ -5,7 +5,7 @@ My bachelor's thesis "Sound synthesis based on audio samples as an VST3 instrume
 
 ## Prerequisites:
 - JUCE framework (https://juce.com/)
-- A supported IDE (XCode, VS, Linux Makefile, Andorid, Code Blocks, CLion)
+- A supported IDE (XCode, Visual Studio, Linux Makefile, Andorid, Code Blocks, CLion)
 
 ## Build and run:
 - Open .juce file in the Projucer (https://juce.com/discover/projucer)
