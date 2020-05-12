@@ -9,8 +9,7 @@ My bachelor's thesis "Sound synthesis based on audio samples as an VST3 instrume
 
 ## Build and install:
 - Open .jucer file in the Projucer (see: https://juce.com/discover/projucer)
-- Choose your IDE in the exporters side panel
-- Click "Save and Open in IDE"
+- Choose your IDE in the exporters side panel and click "Save and Open in IDE"
 - Build the project
 - Copy .vst3 file to "C:\Program Files\Common Files\VST3"
 
