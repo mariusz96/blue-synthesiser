@@ -8,10 +8,10 @@ My bachelor's thesis "Sound synthesis based on audio samples as an VST3 instrume
 - A supported IDE (XCode, Visual Studio, Linux Makefile, Andorid, Code Blocks, CLion)
 
 ## Build and install:
-- Open .jucer file in the Projucer (see: https://juce.com/discover/projucer)
+- Open the .jucer file in the Projucer (see: https://juce.com/discover/projucer)
 - Choose your IDE in the exporters side panel and click "Save and Open in IDE"
 - Build the project
-- Copy .vst3 file to "C:\Program Files\Common Files\VST3"
+- Copy the .vst3 file to "C:\Program Files\Common Files\VST3"
 
 ## Credits:
 - Project implemented at the Lodz University of Technology (https://www.p.lodz.pl/en)
