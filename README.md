@@ -14,4 +14,4 @@ My bachelor's thesis "Sound synthesis based on audio samples as an VST3 instrume
 - Copy .vst3 file to "C:\Program Files\Common Files\VST3"
 
 ## Credits:
-- Project implemented at the Lodz University of Technology (https://www.p.lodz.pl/en)
+- Project implemented at Lodz University of Technology (https://www.p.lodz.pl/en)
