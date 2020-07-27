@@ -1,9 +1,9 @@
 # Blue Synthesiser
-My bachelor's thesis "Sound synthesis based on audio samples as an VST3 instrument" in C++ and JUCE:
+My bachelor's thesis "Sound synthesis based on audio samples as an VST3 instrument" in C++ and JUCE (https://juce.com):<br/>
 ![image](https://user-images.githubusercontent.com/62397363/79278180-8428df80-7eab-11ea-978e-976abcbf1bd9.png)
 
 ## Prerequisites:
-- JUCE (https://juce.com)
+- JUCE
 - A supported IDE (XCode, Visual Studio, Linux Makefile, Andorid, Code Blocks, CLion)
 
 ## Build and install:
