@@ -14,26 +14,24 @@ Synth_v1_0AudioProcessor::Synth_v1_0AudioProcessor()
 #endif
 {
 	audioFormatManager.registerBasicFormats();
-
 	synthesiser.setPoly(4);
-	synthesiser.setSound(new Synth_v1_0SynthesiserSample(*getFile()));
+	Synth_v1_0SynthesiserSample* sample = new Synth_v1_0SynthesiserSample(*getFile());
+	synthesiser.setSound(sample);
 }
 
 AudioFormatReader* Synth_v1_0AudioProcessor::getFile()
 {
 	AudioFormatReader* reader = nullptr;
-	FileChooser fileChooser("wybierz plik audio", audioFile, "");
-
+	FileChooser fileChooser("choose an audio file", audioFile, "");
 	if (fileChooser.browseForFileToOpen())
 	{
 		File file = fileChooser.getResult();
 		reader = audioFormatManager.createReaderFor(file);
 	}
-
 	return reader;
 }
 
-void Synth_v1_0AudioProcessor::prepareToPlay(double sampleRate,	int samplesPerBlock)
+void Synth_v1_0AudioProcessor::prepareToPlay(double sampleRate, int samplesPerBlock)
 {
 	synthesiser.cutOutVoices();
 	synthesiser.setSampleRate(sampleRate);
@@ -43,7 +41,6 @@ void Synth_v1_0AudioProcessor::processBlock(AudioBuffer<float>& buffer, MidiBuff
 {
 	buffer.clear();
 	keyboardState.processNextMidiBuffer(incomingMidi, 0, buffer.getNumSamples(), true);
-
 	synthesiser.getNextBlock(buffer, incomingMidi, 0, buffer.getNumSamples());
 }
 

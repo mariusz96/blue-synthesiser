@@ -1,11 +1,16 @@
 #include "PluginProcessor.h"
 #include "PluginEditor.h"
 
-Synth_v1_0AudioProcessorEditor::Synth_v1_0AudioProcessorEditor (Synth_v1_0AudioProcessor& p) : AudioProcessorEditor (&p), processor (p), synthesiser(p.getSynthesiser())
+Synth_v1_0AudioProcessorEditor::Synth_v1_0AudioProcessorEditor(Synth_v1_0AudioProcessor& p) : AudioProcessorEditor(&p), processor(p), synthesiser(p.getSynthesiser())
 {
-	setSliderWithLabel(polySlider, polyLabel, 4, 1, 64, "Poly");
-	setSliderWithLabel(octaveSlider, octaveLabel, 0, -7, 7, "Octave");
-	setSliderWithLabel(finePitchSlider, finePitchLabel, 0, -600, 600, "Fine");
+	int defPoly = synthesiser.getPoly();
+	int polyRange = synthesiser.getPolyRange();
+	int octaveRange = synthesiser.getOctaveRange();
+	int finePitchRange = synthesiser.getFinePitchRange();
+
+	setSliderWithLabel(polySlider, polyLabel, defPoly, 1, polyRange, "Poly");
+	setSliderWithLabel(octaveSlider, octaveLabel, 0, -octaveRange, octaveRange, "Octave");
+	setSliderWithLabel(finePitchSlider, finePitchLabel, 0, -finePitchRange, finePitchRange, "Fine");
 
 	setKnobWithLabel(attackKnob, attackLabel, 0.0, 0.0, 20.0, "A");
 	setKnobWithLabel(decayKnob, decayLabel, 0.0, 0.0, 20.0, "D");
@@ -14,16 +19,15 @@ Synth_v1_0AudioProcessorEditor::Synth_v1_0AudioProcessorEditor (Synth_v1_0AudioP
 
 	keyboardComponent.clearKeyMappings();
 	addAndMakeVisible(keyboardComponent);
-
-	setOpaque (true);
-    setSize (370, 320);
+	setOpaque(true);
+	setSize(370, 320);
 }
 
 Synth_v1_0AudioProcessorEditor::~Synth_v1_0AudioProcessorEditor() {}
 
-void Synth_v1_0AudioProcessorEditor::paint (Graphics& g)
+void Synth_v1_0AudioProcessorEditor::paint(Graphics& g)
 {
-    g.fillAll (getLookAndFeel().findColour (ResizableWindow::backgroundColourId));
+	g.fillAll(getLookAndFeel().findColour(ResizableWindow::backgroundColourId));
 }
 
 void Synth_v1_0AudioProcessorEditor::resized()
@@ -42,7 +46,6 @@ void Synth_v1_0AudioProcessorEditor::resized()
 	octaveSlider.setBounds(50, finePitchSlider.getY() - sliderHeight, getWidth() - 50, sliderHeight);
 	polySlider.setBounds(50, octaveSlider.getY() - sliderHeight, getWidth() - 50, sliderHeight);
 
-
 	getKnobAndSliderValues();
 }
 
@@ -53,9 +56,9 @@ void Synth_v1_0AudioProcessorEditor::getKnobAndSliderValues()
 	sustainKnob.setValue(synthesiser.getSustain());
 	releaseKnob.setValue(synthesiser.getRelease());
 
-	finePitchSlider.setValue((double)synthesiser.getFinePitch());
-	octaveSlider.setValue((double)synthesiser.getOctave());
-	polySlider.setValue((double)synthesiser.getPoly());
+	finePitchSlider.setValue(synthesiser.getFinePitch());
+	octaveSlider.setValue(synthesiser.getOctave());
+	polySlider.setValue(synthesiser.getPoly());
 }
 
 void Synth_v1_0AudioProcessorEditor::setKnobWithLabel(Slider& knob, Label& label, double defaultfVal, double startVal, double endVal, String textOnLabel)

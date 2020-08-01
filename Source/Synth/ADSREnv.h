@@ -1,12 +1,5 @@
 #pragma once
 #include "../JuceLibraryCode/JuceHeader.h"
-/*
-		 /\D
-		/  \
-	   /    \__ __
-	  /      S    \R
-	A/		       \
-*/
 
 enum class Stage {
 	attack,
@@ -16,6 +9,13 @@ enum class Stage {
 	off
 };
 
+/*
+		 /\D
+		/  \
+	   /    \__ __
+	  /      S    \R
+	A/		       \
+*/
 class Synth_v1_0ADSREnv
 {
 public:
@@ -26,18 +26,18 @@ public:
 	void keyRelease();
 	void cutOut();
 
-	double getNextSample();
+	float getNextSample();
 	Stage getEnvelopeStage();
 
-	void setParameters(double attack_time, double decay_time, double sustain_val, double release_time);
+	void setParameters(float attack_time, float decay_time, float sustain_val, float release_time);
 	void setSampleRate(double sampleRate);
 
 private:
 	void updateInternalRates();
 
 	Stage envelope_stage = Stage::off;
-	double envelope_val = 0.0;
-	double attack_time, decay_time, sustain_val, release_time;
-	double attackRate_perSample = 0.0, decayRate_perSample = 0.0, releaseRate_perSample = 0.0;
+	float envelope_val = 0.0f;
+	float attack_time = 0.0f, decay_time = 0.0f, sustain_val = 0.0f, release_time = 0.0f;
+	float attackRate_perSample = 0.0f, decayRate_perSample = 0.0f, releaseRate_perSample = 0.0f;
 	double sampleRate = 44100.0;
 };
