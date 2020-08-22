@@ -12,11 +12,9 @@ My bachelor's thesis "Sound synthesis based on audio samples as an VST3 instrume
 - Build the project
 - Copy synth_v1_0.vst3 to "C:\Program Files\Common Files\VST3"
 
-## Programs studied during development:
+## Credits:
+- Project implemented at Lodz University of Technology (https://www.p.lodz.pl/en)
 - Audio Synthesiser Demo by https://github.com/juce-framework/JUCE/blob/master/examples/Audio/AudioSynthesiserDemo.h
 - Simple Audio Player by https://github.com/theaudioprogrammer/simpleAudioPlayerJUCE
 - Tutorial: The Slider class by https://docs.juce.com/master/tutorial_slider_values.html
 - Tutorial: Customise the look and feel of your app by https://docs.juce.com/master/tutorial_look_and_feel_customisation.html
-
-## Credits:
-- Project implemented at Lodz University of Technology (https://www.p.lodz.pl/en)
