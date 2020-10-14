@@ -2,7 +2,8 @@
 
 <JUCERPROJECT id="kA2mmW" name="synth_v1_0" projectType="audioplug" pluginFormats="buildVST3"
               pluginCharacteristicsValue="pluginIsSynth,pluginWantsMidiIn"
-              pluginAUMainType="'augn'" displaySplashScreen="1" jucerFormatVersion="1">
+              pluginAUMainType="'augn'" displaySplashScreen="1" jucerFormatVersion="1"
+              jucerVersion="5.4.7">
   <MAINGROUP id="Aaqz3g" name="synth_v1_0">
     <GROUP id="{6A95C5CE-8643-82C6-7D93-BD25CBF4DA67}" name="Source"/>
     <GROUP id="{C1D867E6-CB90-C3EA-B9BE-1051B4EA1A49}" name="Plugin">
