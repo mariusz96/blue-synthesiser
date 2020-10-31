@@ -6,7 +6,7 @@ My bachelor's thesis "Sound synthesis based on audio samples as an VST3 instrume
 - A supported IDE (XCode, Visual Studio, Linux Makefile, Andorid, Code Blocks, CLion)
 
 ## Build and install:
-### [Projucer](https://juce.com/discover/projucer):
+### Projucer:
 - Open synth_v1_0.jucer
 - Choose your IDE in the exporters side panel and click "Save and Open in IDE"
 ### A supported IDE:
