@@ -7,7 +7,7 @@ My bachelor's thesis "Sound synthesis based on audio samples as an VST3 instrume
 
 ## Build and install:
 ### Projucer:
-- Open synth_v1_0.jucer
+- Open synth_v1_0.jucer (see: https://juce.com/discover/projucer)
 - Choose your IDE in the exporters side panel and click "Save and Open in IDE"
 ### A supported IDE:
 - Build the project
