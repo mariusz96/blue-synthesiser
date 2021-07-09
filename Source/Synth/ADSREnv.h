@@ -9,13 +9,6 @@ enum class Stage {
 	off
 };
 
-/*
-		 /\D
-		/  \
-	   /    \__ __
-	  /      S    \R
-	A/		       \
-*/
 class Synth_v1_0ADSREnv
 {
 public:

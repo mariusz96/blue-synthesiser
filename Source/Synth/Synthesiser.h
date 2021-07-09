@@ -20,11 +20,6 @@ private:
 	JUCE_LEAK_DETECTOR(Synth_v1_0SynthesiserSample)
 };
 
-/*
-	| █ || █ || █ |
-	| █ || █ || █ |
-	|   ||   ||   |
-*/
 class Synth_v1_0SynthesiserVoice
 {
 public:
@@ -57,12 +52,6 @@ private:
 	JUCE_LEAK_DETECTOR(Synth_v1_0SynthesiserVoice)
 };
 
-/*	  ________________________
-	 /    oo  oo  oo  oo     /\
-	/ // /‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾/ /
-	\‾‾‾‾\‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾\/
-	 ‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾
-*/
 class Synth_v1_0Synthesiser
 {
 public:
